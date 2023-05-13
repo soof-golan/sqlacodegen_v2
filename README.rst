@@ -5,6 +5,8 @@
   :target: https://coveralls.io/github/agronholm/sqlacodegen?branch=master
   :alt: Code Coverage
 
+This is an fork project from https://github.com/agronholm/sqlacodegen
+
 This is a tool that reads the structure of an existing database and generates the
 appropriate SQLAlchemy model code, using the declarative style if possible.
 
@@ -18,7 +20,7 @@ latest SQLAlchemy version).
 Features
 ========
 
-* Supports SQLAlchemy 1.4.x
+* Supports SQLAlchemy 2.0
 * Produces declarative code that almost looks like it was hand written
 * Produces `PEP 8`_ compliant code
 * Accurately determines relationships, including many-to-many, one-to-one
@@ -70,6 +72,7 @@ The following built-in generators are available:
 
 * ``tables`` (only generates ``Table`` objects, for those who don't want to use the ORM)
 * ``declarative`` (the default; generates classes inheriting from ``declarative_base()``
+* ``declarative-dataclasses`` (generate declarative model with Superclass ``MappedAsDataclass``)
 * ``dataclasses`` (generates dataclass-based models; v1.4+ only)
 * ``sqlmodels`` (generates model classes for SQLModel_)
 
@@ -178,12 +181,7 @@ For examples, you can look at sqlacodegen's own entry points in its `pyproject.t
 .. _entry point: https://setuptools.readthedocs.io/en/latest/userguide/entry_point.html
 .. _pyproject.toml: https://github.com/agronholm/sqlacodegen/blob/master/pyproject.toml
 
-Getting help
-============
-
-If you have problems or other questions, you should start a discussion on the
-`sqlacodegen discussion forum`_. As an alternative, you could also try your luck on the
-sqlalchemy_ room on Gitter.
-
-.. _sqlacodegen discussion forum: https://github.com/agronholm/sqlacodegen/discussions/categories/q-a
-.. _sqlalchemy: https://app.gitter.im/#/room/#sqlalchemy_community:gitter.im
+Customizing Workflow
+=================================
+You may import ``generate_models`` directly from  ``sqlacodegen_v2``
+``geneg

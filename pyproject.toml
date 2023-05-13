@@ -6,10 +6,10 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sqlacodegen"
-description = "Automatic model code generator for SQLAlchemy"
+name = "sqlacodegen-2.0"
+description = "Automatic model code generator for SQLAlchemy 2.0"
 readme = "README.rst"
-authors = [{name = "Alex Grönholm", email = "alex.gronholm@nextday.fi"}]
+authors = [{name = "Chengkai Mai", email = "c.mai@madainchina.com"}]
 keywords = ["sqlalchemy"]
 license = {text = "MIT"}
 classifiers = [
@@ -28,7 +28,7 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-    "SQLAlchemy >= 1.4.36, < 2.0",
+    "SQLAlchemy >= 2.0",
     "inflect >= 4.0.0",
     "importlib_metadata; python_version < '3.10'",
 ]
@@ -53,6 +53,7 @@ tables = "sqlacodegen.generators:TablesGenerator"
 declarative = "sqlacodegen.generators:DeclarativeGenerator"
 dataclasses = "sqlacodegen.generators:DataclassGenerator"
 sqlmodels = "sqlacodegen.generators:SQLModelGenerator"
+declarative-dataclasses = "sqlacodegen.generators:DeclarativeDataclassGenerator"
 
 [project.scripts]
 sqlacodegen = "sqlacodegen.cli:main"
