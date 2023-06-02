@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sqlacodegen-2.0"
+name = "sqlacodegen"
 description = "Automatic model code generator for SQLAlchemy 2.0"
 readme = "README.rst"
 authors = [{name = "Chengkai Mai", email = "c.mai@madainchina.com"}]
